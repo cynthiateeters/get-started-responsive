@@ -1,0 +1,351 @@
+/****** Elad Shechter's RESET *******/
+/*** box sizing border-box for all elements ***/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+figure {
+  margin: 0;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+cite {
+  font-style: normal;
+}
+
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* variables */
+/* typography */
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 100 900;
+  src: url("../fonts/Montserrat-VF.woff2") format("woff2");
+}
+button {
+  background-color: #04A594;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.chess-rook {
+  fill: #04A594;
+}
+
+/* card */
+.card {
+  counter-reset: number;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card__container {
+  -webkit-box-shadow: 0px 0px 20px #c4c4c4;
+          box-shadow: 0px 0px 20px #c4c4c4;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  width: 25%;
+  margin: 0 0.5rem 4rem;
+  background: white;
+  text-align: center;
+  position: relative;
+}
+.card__container::before {
+  counter-increment: number;
+  content: counter(number);
+  width: 4rem;
+  height: 4rem;
+  background: #12e7c0;
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  top: -2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 3.6rem;
+}
+.card__title {
+  margin: 2rem 0 1rem 0;
+  font-weight: 400;
+}
+
+/* home */
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #f3f3f3;
+}
+
+main {
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+
+/* _nav.scss */
+.nav {
+  background-color: white;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eef1f6;
+}
+.nav__toggle {
+  position: absolute;
+  cursor: pointer;
+  margin: 0rem 1rem;
+  right: 0;
+}
+.nav__toggle svg {
+  width: 1.5rem;
+  fill: #2a324b;
+}
+.nav__toggle .close {
+  display: none;
+}
+.nav__toggle .menu {
+  margin-top: 0.2rem;
+}
+.nav__checkbox {
+  display: none;
+}
+.nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+}
+.nav__menu li {
+  list-style: none;
+  display: none;
+  border-bottom: 6px solid transparent;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.nav__menu li:active, .nav__menu li:hover {
+  border-bottom: 6px solid #12e7c0;
+}
+.nav__menu li:first-child {
+  margin-right: auto;
+  display: block;
+}
+.nav__menu a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+}
+.nav__menu svg {
+  width: 1.5rem;
+  fill: #2a324b;
+}
+
+#nav__checkbox:checked ~ ul.nav__menu li {
+  display: block;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .close {
+  display: block;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .menu {
+  display: none;
+}
+
+@media only screen and (min-width: 834px) {
+  .nav__toggle {
+    display: none;
+  }
+  .nav__menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav__menu li {
+    display: block;
+  }
+}
+.about {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.about__container {
+  -webkit-box-shadow: 0px 0px 20px #c4c4c4;
+          box-shadow: 0px 0px 20px #c4c4c4;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 0 0.5rem 4rem;
+  background: white;
+  text-align: center;
+  position: relative;
+  width: 80vw;
+  max-width: 80ch;
+}
+.about__title {
+  margin: 2rem 0 1rem 0;
+  font-weight: 400;
+  border-bottom: 7px solid #12e7c0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+}
+.about__description {
+  max-width: 80ch;
+  margin: 2rem;
+}
+
+/* _contact.scss */
+.contact {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0px 0px 20px #c4c4c4;
+          box-shadow: 0px 0px 20px #c4c4c4;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 0 0.5rem 4rem;
+  background: white;
+  text-align: center;
+  position: relative;
+  width: 80vw;
+  max-width: 80ch;
+}
+.contact__elements {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 20rem;
+}
+.contact__title {
+  margin: 2rem 0 1rem 0;
+  font-weight: 400;
+  border-bottom: 7px solid #12e7c0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+}
+.contact__input {
+  width: 100%;
+}
+
+/* main */
+/*# sourceMappingURL=main.css.map */

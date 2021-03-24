@@ -1,0 +1,45 @@
+/* card */
+
+@use "../utilities/variables" as var;
+
+.card {
+    counter-reset: number;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
+    &__container {
+        box-shadow: 0px 0px 20px var.$color-gray;
+        border-radius: var.$border-radius;
+        padding: 2rem;
+        width: 25%;
+        min-width: 300px;
+        margin: 0 0.5rem 4rem;
+        background: white;
+        text-align: center;
+        position: relative;
+    }
+  
+    &__container::before {
+        counter-increment: number;
+        content: counter(number);
+        width: 4rem;
+        height: 4rem;
+        background: var.$color-main;
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        top: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 3.6rem;
+    }
+  
+    &__title {
+        margin: 2rem 0 1rem 0;
+        font-weight: 400;
+    }
+}

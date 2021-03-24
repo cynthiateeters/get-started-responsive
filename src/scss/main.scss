@@ -1,0 +1,11 @@
+/* main */
+@use "./base/reset";
+@use "./utilities/variables" as var;
+@use './base/typography' as type;
+@use "./components/button";
+@use "./components/svg";
+@use "./pages/home";
+@use "./components/nav";
+@use "./components/card";
+@use "./components/about";
+@use "./components/contact";

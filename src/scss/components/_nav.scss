@@ -1,0 +1,99 @@
+/* _nav.scss */
+@use "../utilities/variables" as var;
+
+.nav {
+  background-color: white;
+  padding: 1rem 0;
+  border-bottom: 1px solid var.$clr-gray200;
+
+  &__logo {
+    width: 2.5rem;
+    height: auto;
+  }
+
+  &__toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 1rem 1rem;
+    right: 0;
+
+    svg {
+      width: 1.5rem;
+      fill: var.$clr-gray600;
+    }
+
+    .close {
+      display: none;
+    }
+
+    .menu {
+      margin-top: 0.2rem;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 1rem;
+
+    li {
+      list-style: none;
+      display: none;
+      border-bottom: 6px solid transparent;
+      transition: all 0.5s ease;
+
+      &:active,
+      &:hover {
+        border-bottom: 6px solid var.$color-main;
+      }
+
+      &:first-child {
+        margin-right: auto;
+        display: block;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Toggle the hamburger menu in mobile view
+#nav__checkbox:checked ~ ul.nav__menu li {
+  display: block;
+}
+
+//Change from menu to close icon on tap
+#nav__checkbox:checked ~ label.nav__toggle .close {
+  display: block;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .menu {
+  display: none;
+}
+
+// Desktop view
+@media only screen and (min-width: 834px) {
+  .nav {
+    &__toggle {
+      display: none;
+    }
+
+    &__menu {
+      flex-direction: row;
+
+      li {
+        display: block;
+      }
+    }
+  }
+}

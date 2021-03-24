@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started Responsive</title>
+  <link rel="stylesheet" href="scss/main.scss">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+</head>
+
+<body>
+  <nav class="nav">
+    <input type="checkbox" id="nav__checkbox" class="nav__checkbox">
+    <label for="nav__checkbox" class="nav__toggle">
+      <svg class="menu" viewBox="0 0 448 512" width="100" title="bars">
+        <path
+          d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+      </svg>
+      <svg class="close" viewBox="0 0 384 512" width="100" title="times">
+        <path
+          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+      </svg>
+    </label>
+    <ul class="nav__menu">
+
+      <li>
+        <div class="nav__logo">
+          <a href="#">
+            <svg viewBox="0 0 600 600" title="chess-rook" class="chess-rook">
+              <path class="st0" d="M525.5,45h-71.8c-11.3,0-20.5,9.2-20.5,20.5V127h-61.5V65.5c0-11.3-9.2-20.5-20.5-20.5H248.8
+            c-11.3,0-20.5,9.2-20.5,20.5V127h-61.4V65.5c0-11.3-9.2-20.5-20.5-20.5H74.5C63.2,45,54,54.2,54,65.5V291l82,41
+            c0,61.9-2,121.7-16.9,205h361.9C466,453.7,464,393.1,464,332l82-41V65.5C546,54.2,536.8,45,525.5,45z M367.9,435.8H238l0.5-120.4
+            c0-22.6,38.9-24.3,61.5-24.3s67.9,3,67.9,25.6V435.8z" />
+            </svg>
+
+          </a>
+        </div>
+      </li>
+      <li><a href="#main">Main</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main id="main">
+    <h1>Get Started</h1>
+    <div class="card">
+      <div class="card__container">
+        <h2 class="card__title">Pick a Template</h2>
+        <p class="card__description">
+          Choose from a selection of over 300 templates. Perfect for Birthdays,Graduation, Anniversairies and more!</p>
+      </div>
+
+      <div class="card__container">
+        <h2 class="card__title">Make it your own</h2>
+        <p class="card__description">
+          Customize your card by uploading images, videos, and writing a personal message!
+        </p>
+      </div>
+
+      <div class="card__container">
+        <h2 class="card__title">Share it out</h2>
+        <p class="card__description">
+          Send your card out by email or text. You can send your card out immediately or scheldule it for the perfect
+          time and date.</p>
+      </div>
+    </div>
+    <section id="about" class="about">
+      <div class="about__container">
+        <h2 class="about__title">About</h2>
+        <p class="about__description">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores
+          sed iure illo eum, dignissimos dolorem quaerat repellendus! Obcaecati,
+          perferendis illo error ut eum exercitationem odit repellat dicta ullam
+          aspernatur nihil debitis quam alias. Sequi mollitia, quibusdam dignissimos
+          nostrum, beatae laboriosam natus corporis aliquam voluptas optio incidunt,
+          animi excepturi voluptatem tempora.</p>
+
+        <p class="about__description">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Adipisci voluptatem, facilis obcaecati, corrupti,
+          debitis eveniet sit quaerat ex quod repellat magnam molestias
+          qui ipsum culpa. Quisquam dolore laborum mollitia nobis quod
+          inventore cumque perspiciatis et maxime natus nisi voluptate illo
+          nulla doloribus, voluptates cum? Quod maxime minus ipsa sit placeat.</p>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+
+      <form class="contact__container" id="contactForm" name="contactForm" method="post" data-netlify="true">
+
+        <h2 class="contact__title">Contact</h2>
+
+        <div class="contact__elements" id="formElements">
+
+          <!--Name-->
+          <br>
+          <label for="name">Name</label>
+          <br>
+          <input class="contact__input" type="text" id="name" name="name" placeholder="Name" required>
+
+          <!--Email-->
+          <br>
+          <label for="email">Email Address</label>
+          <br>
+          <input class="contact__input" type="email" id="email" name="email" placeholder="Email Address" required>
+
+          <!--Message-->
+          <br>
+          <label for="message">Message (optional)</label>
+          <br>
+          <textarea class="contact__input" id="message" name="message" rows="8" placeholder="Message"></textarea>
+
+          <!--Submit-->
+          <br>
+          <button type="submit">Send</button>
+
+        </div>
+
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+/* home */
+
+@use "../utilities/variables" as var;
+@use "../base/typography" as type;
+@use "../components/card";
+
+body {
+    font-family: type.$font;
+    background: var.$color-lightgray;
+}
+
+main {
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
