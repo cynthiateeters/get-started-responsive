@@ -7,6 +7,9 @@
 body {
     font-family: type.$font;
     background: var.$color-lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 main {
