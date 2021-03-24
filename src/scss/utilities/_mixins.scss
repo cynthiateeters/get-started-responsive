@@ -26,7 +26,8 @@
 
 @mixin input-box {
   width: 100%;
-  height: 2rem;
+  height: 2.5rem;
   font-size: 1.2rem;
   border: 1px solid #888;
+  border-radius: 0.5rem;
 }
