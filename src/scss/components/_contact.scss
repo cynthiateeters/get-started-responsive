@@ -42,10 +42,9 @@
 
   &__input {
     @include input-box;
-  }
 
-  &__area {
-    @include input-box;
-    height: auto;
+    &--textarea {
+      height: auto;
+    }
   }
 }
