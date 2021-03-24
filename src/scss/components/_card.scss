@@ -4,69 +4,66 @@
 @use "../utilities/mixins" as *;
 
 .card {
-    counter-reset: number;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 2rem;
+  counter-reset: number;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: var.$breakpoint-max) {
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    margin: 0 1%;
+    max-width: var.$maximum-width;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 0px 20px var.$color-gray;
+    border-radius: var.$border-radius;
+    padding: 2rem;
+    min-width: 300px;
+    //margin: 0 0.5rem 4rem;
+    margin: 0 0 5rem 0;
+    background: white;
+    text-align: center;
+    position: relative;
+    @include responsive-width;
+    max-width: 28rem;
 
     @media screen and (min-width: var.$breakpoint-max) {
-        flex-direction: row;
-        justify-content: center;
-        margin: 0 1%;
-        max-width: var.$maximum-width;
+      width: 25%;
     }
-    
-  
-    &__container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        box-shadow: 0px 0px 20px var.$color-gray;
-        border-radius: var.$border-radius;
-        padding: 2rem;
-        min-width: 300px;
-        //margin: 0 0.5rem 4rem;
-        margin: 0 0 5rem 0;
-        background: white;
-        text-align: center;
-        position: relative;
-        @include responsive-width;
-        max-width: 28rem;
+  }
 
-        @media screen and (min-width: var.$breakpoint-max) {
-            width: 25%;
-        }
+  &__container::before {
+    counter-increment: number;
+    content: counter(number);
+    width: 4rem;
+    height: 4rem;
+    background: var.$color-main;
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 3.6rem;
+  }
 
+  &__title {
+    margin: 2rem 0 1rem 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
 
-    }
-  
-    &__container::before {
-        counter-increment: number;
-        content: counter(number);
-        width: 4rem;
-        height: 4rem;
-        background: var.$color-main;
-        position: absolute;
-        display: block;
-        border-radius: 50%;
-        top: -2rem;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 3rem;
-        font-weight: bold;
-        line-height: 3.6rem;
-    }
-  
-    &__title {
-        margin: 2rem 0 1rem 0;
-        font-weight: 400;
-        font-size: 1.4rem
-    }
-
-    &__description {
-        @include readable;
-    }
+  &__description {
+    @include readable;
+  }
 }
