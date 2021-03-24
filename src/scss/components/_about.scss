@@ -1,4 +1,5 @@
 @use "../utilities/variables" as var;
+@use "../utilities/mixins" as *;
 
 .about {
   margin: 0 auto;
@@ -15,8 +16,7 @@
     background: white;
     text-align: center;
     position: relative;
-    width: 80vw;
-    max-width: 80ch;
+    @include responsive-width;
   }
 
   &__title {
