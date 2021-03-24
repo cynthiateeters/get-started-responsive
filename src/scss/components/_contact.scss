@@ -36,7 +36,17 @@
     @include section-title;
   }
 
+  &__label {
+    font-size: 1.2rem;
+
+  }
+
   &__input {
-    width: 100%;
+    @include input-box;
+  }
+
+  &__area {
+    @include input-box;
+    height: auto;
   }
 }

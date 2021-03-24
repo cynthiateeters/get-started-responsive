@@ -7,8 +7,15 @@
     counter-reset: number;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
+
+    @media screen and (min-width: 1025px) {
+        flex-direction: row;
+        justify-content: center;
+    }
     
   
     &__container {
@@ -25,12 +32,13 @@
         text-align: center;
         position: relative;
         @include responsive-width;
+        max-width: 28rem;
 
-        @media screen and (min-width: 64rem) {
-            width: 33%;
-            margin: 0 0.5rem 4rem;
-            max-width: 20rem;
+        @media screen and (min-width: 1025px) {
+            width: 25%;
         }
+
+
     }
   
     &__container::before {
