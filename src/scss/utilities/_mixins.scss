@@ -1,5 +1,21 @@
+@use "./variables" as var;
+
 @mixin responsive-width {
   width: 96%;
-  margin: 1rem auto;
+  margin: 3rem auto;
   max-width: 40rem;
+}
+
+@mixin readable {
+  max-width: 80ch;
+  margin: 2rem;
+}
+
+@mixin section-title {
+  margin: 2rem 0 1rem 0;
+  font-weight: 400;
+  font-size: 2rem;
+  border-bottom: 7px solid var.$color-main;
+  width: max-content;
+  margin: auto;
 }

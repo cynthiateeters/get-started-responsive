@@ -33,11 +33,7 @@
   }
 
   &__title {
-    margin: 2rem 0 1rem 0;
-    font-weight: 400;
-    border-bottom: 7px solid var.$color-main;
-    width: max-content;
-    margin: auto;
+    @include section-title;
   }
 
   &__input {
